@@ -60,11 +60,11 @@ const HostBloodDrivePage = () => {
 	const HostBloodDrivePageDetails = {
 		quote: {
 			classHint: "quote host-drive-quote",
-			quoteText: `“Your decision to host a blood drive with us can be the reason someone smiles today, tomorrow, and for many years to come. Let's make a difference together!”`,
+			quoteText: `“Your decision to partner with us can be the reason someone smiles today, tomorrow, and for many years to come. Let's make a difference together!”`,
 		},
 		benefits_host_drive: {
 			subheadingText: "Being a Hero",
-			headingText: "Benefits of Hosting a Blood Drive",
+			headingText: "Benefits of Partnering with us",
 			classHint: "side-col-image benefits-host-drive",
 			paraText: `Hosting a blood drive is a great way to give back to your community and help save lives.
 			By providing a convenient location for people to donate, you can help ensure that there is a steady supply of blood for those in need.
@@ -90,7 +90,7 @@ const HostBloodDrivePage = () => {
 
 		hero: {
 			subheadingText: "Join us to save lives",
-			headingText: "Host a Blood Drive to save lives with us",
+			headingText: "Partner with us, together we can save lives",
 			classHint: "host-blood-drive-page-hero",
 		},
 		stepsText: {
@@ -173,8 +173,8 @@ const HostBloodDrivePage = () => {
 			<HeroComponent {...HostBloodDrivePageDetails.hero} />
 			<FormComponent
 				fields={fields}
-				heading={"Host a Blood Drive"}
-				buttonText={"Schedule Host"}
+				heading={"Contact Us for Partnership"}
+				buttonText={"Join Us"}
 				handleSubmit={handleSubmit}
 				formData={formData}
 				setFormData={setFormData}

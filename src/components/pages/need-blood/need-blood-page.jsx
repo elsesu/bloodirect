@@ -18,7 +18,9 @@ const NeedBloodPage = () => {
 		email: "",
 		phone: "",
 		bloodType: "",
-		message: "",
+		state: "",
+		lga: "",
+		current_hospital_address: "",
 	});
 
 	const handleSubmit = (e) => {
@@ -31,7 +33,9 @@ const NeedBloodPage = () => {
 			email: formData.email,
 			phone: formData.phone,
 			bloodType: formData.bloodType,
-			message: formData.message,
+			state: formData.state,
+			lga: formData.lga,
+			current_hospital_address: formData.current_hospital_address,
 		})
 			.then((response) => {
 				console.log("success");
@@ -48,7 +52,10 @@ const NeedBloodPage = () => {
 			email: "",
 			phone: "",
 			bloodType: "",
-			message: "",
+			state: "",
+		    lga: "",
+		    current_hospital_address: "",
+			
 		});
 	};
 
@@ -144,7 +151,28 @@ const NeedBloodPage = () => {
 			name: "bloodType",
 			type: "text",
 			placeholder: "Blood Type",
-			required: false,
+			required: true,
+		},
+		{
+			key: "state",
+			name: "state",
+			type: "text",
+			placeholder: "State",
+			required: true,
+		},
+		{
+			key: "lga",
+			name: "lga",
+			type: "text",
+			placeholder: "Local Government",
+			required: true,
+		},
+		{
+			key: "current_hospital_address",
+			name: "current_hospital_address",
+			type: "text",
+			placeholder: "current Hospital Address",
+			required: true,
 		},
 	];
 

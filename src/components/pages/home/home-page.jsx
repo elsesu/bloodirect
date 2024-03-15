@@ -59,7 +59,7 @@ const HomePage = () => {
 		},
 		hero: {
 			subheadingText: "Give the gift of life",
-			headingText: "Your Blood Can Make A Difference",
+			headingText: "Not all heroes wear capes, Some donate Blood",
 			classHint: "home-page-hero",
 		},
 		stepsText: {

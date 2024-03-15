@@ -22,8 +22,8 @@ const FormComponent = ({
 				</h3>
 				{status === "Submited" ? (
 					<p className="text-center text-white text-sm sm:text-base mt-5">
-						Thank you for contacting HemoCell. We will get back to
-						you as soon as possible.
+						Your Appointment has been Scheduled,    Thank you for contacting Bloodirect.
+			
 					</p>
 				) : (
 					<form
@@ -49,23 +49,7 @@ const FormComponent = ({
 								required={field.required}
 							/>
 						))}
-						<div className="grid sm:col-span-2 gap-5 w-full">
-							<textarea
-								onChange={(e) =>
-									setFormData({
-										...formData,
-										message: e.target.value,
-									})
-								}
-								value={formData.message}
-								type="text"
-								name="name"
-								id="name"
-								className={`${inputStyles} h-[8em]`}
-								row={10}
-								placeholder="Any other information..."
-							/>
-						</div>
+						
 						<div className="grid place-items-center sm:col-span-2 gap-5 mb-5 w-full">
 							<button
 								type="submit"

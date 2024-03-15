@@ -20,7 +20,10 @@ const DonateBloodPage = () => {
 		email: "",
 		phone: "",
 		bloodType: "",
-		message: "",
+		state: "",
+		lga:"",
+		address: "",
+
 	});
 
 	const handleSubmit = (e) => {
@@ -38,14 +41,17 @@ const DonateBloodPage = () => {
 			email: formData.email,
 			phone: formData.phone,
 			bloodType: formData.bloodType,
-			message: formData.message,
+			state: formData.state,
+			lga: formData.lga,
+			address: formData.address
+			
 		})
 			.then((response) => {
 				console.log("success");
 				console.log(response.data);
 			})
 			.catch((error) => {
-				console.log(error);
+				console.log(error, 'not found');
 			});
 
 		newUsersInsertRequest(formData, "donate-blood");
@@ -55,7 +61,9 @@ const DonateBloodPage = () => {
 			email: "",
 			phone: "",
 			bloodType: "",
-			message: "",
+			state: "",
+			address: "",
+			lga: "",
 		});
 	};
 
@@ -80,10 +88,11 @@ const DonateBloodPage = () => {
 			buttonHave: true,
 		},
 		eligiblity_criteria: {
-			subheadingText: "Are you ready?",
-			headingText: "Eligibility Criteria",
+			subheadingText: "Ready to be a hero?",
+			headingText: "lets Find Out Together",
 			classHint: "side-col-image eligibility-criteria",
 			paraText: [
+				`ARE YOU?`,
 				`18-50 years, above 50 Kg.`,
 				`Normal temperature, pulse and blood pressure.`,
 				`No Respiratory Diseases`,
@@ -158,6 +167,27 @@ const DonateBloodPage = () => {
 			name: "bloodType",
 			type: "text",
 			placeholder: "Blood Type",
+			required: true,
+		},
+		{
+			key: "state",
+			name: "state",
+			type: "text",
+			placeholder: "State",
+			required: true,
+		},
+		{
+			key: "address",
+			name: "address",
+			type: "text",
+			placeholder: "Address",
+			required: true,
+		},
+		{
+			key: "lga",
+			name: "lga",
+			type: "text",
+			placeholder: "LGA",
 			required: true,
 		},
 	];

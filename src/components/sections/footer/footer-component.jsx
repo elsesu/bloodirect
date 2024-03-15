@@ -4,10 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const FooterComponent = () => {
 	const exploreLinks = [
-		{
-			title: "Home",
-			link: "/",
-		},
+		
 		{
 			title: "Donate Blood",
 			link: "/donate-blood",
@@ -16,12 +13,9 @@ const FooterComponent = () => {
 			title: "Request Blood",
 			link: "/need-blood",
 		},
+		
 		{
-			title: "Donate Money",
-			link: "https://donorbox.org/donate-money-11",
-		},
-		{
-			title: "Host Blood Drive",
+			title: "Partner With Us",
 			link: "/host-blood-drive",
 		},
 		{
@@ -36,21 +30,18 @@ const FooterComponent = () => {
 
 	const contactLinks = [
 		{
-			title: "(+92)-304-050-9060",
+			title: "(+234)-90-2417-7393",
 			link: "tel:+923040509060",
 		},
 		{
-			title: "help@hemocell.com",
+			title: "info@bloodirect.com",
 			link: "mailto:help@hemocell.com",
 		},
 		{
-			title: "Karachi, Pakistan",
+			title: "Abuja, Nigeria",
 			link: "https://goo.gl/maps/QCLpYP3yyUqdT8HA7",
 		},
-		{
-			title: "Open 24/7",
-			link: "/contact",
-		},
+
 	];
 
 	return (
@@ -59,7 +50,7 @@ const FooterComponent = () => {
 				<div className="first-section-wrapper grid sm:grid-cols-[1.5fr_1fr_1fr] gap-10">
 					<div className="flex flex-col footer-col first-col">
 						<h2 className="not-italic font-bold text-[40px] leading-[55px] text-white">
-							Hemo<span className="text-[red]">Cell</span>
+							Bloo<span className="text-[red]">direct</span>
 						</h2>
 						<h3 className="not-italic font-normal text-[20px] leading-10 text-[#D9D9D9]">
 							You don't have to be a doctor to save a life: Just
@@ -103,13 +94,13 @@ const FooterComponent = () => {
 				</div>
 				<div className="footer-col fourth-col text-center mt-10 border-t-[1px] border-off_white/[.2] pt-6">
 					<h3 className="not-italic text-center font-regular text-[18px] leading-[34px] text-[#D9D9D9] ">
-						©️ 2023 HemoCell - Website design by{" "}
+						©️ 2024 Bloodirect - Website design by{" "}
 						<a
 							href="https://linkedin.com/in/moazamdev"
 							className="underline"
 							target="_blank"
 						>
-							AlphaDev
+							SEPAVIC
 						</a>
 					</h3>
 				</div>
