@@ -6,6 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import BlackLogo from "../../../../public/HemoCell Logo black.png";
 import WhiteLogo from "../../../../public/HemoCell Logo White.png";
+import bloodlogs from "../../../assets/images/White logo - no background 2.png"
 
 const navigation = [
 	{ name: "Home", href: "/" },
@@ -54,7 +55,7 @@ const HeaderComponent = () => {
 				<div className="flex lg:flex-1">
 					<a href="/" className="-m-1.5 p-1.5">
 						<span className="sr-only">{compnayName}</span>
-						<img className="w-auto h-10" src={WhiteLogo} alt="" />
+						<img className="w-25 h-12" src={bloodlogs} alt="" />
 					</a>
 				</div>
 
