@@ -11,14 +11,14 @@ const BeforeFooterCTA = ({ subheadingText, headingText, classHint }) => {
 					className={` flex flex-col justify-center items-center w-full relative z-[25] overflow-hidden`}
 				>
 					<GroupedHeadingComponent
-						subheadingText={"Be a hero, save a life today!"}
-						headingText={"Donate Blood, Donate Hope."}
+						subheadingText={"Your journey to heroism awaits!"}
+						headingText={" Save lives today donate blood!"}
 						mode="light"
 						position="center"
 						boxWidth="large"
 					/>
 					<ButtonComponent
-						buttonText={"Donate Blood Today"}
+						buttonText={"Donate Blood"}
 						buttonLink={"/donate-blood"}
                         buttonType="line"
 					/>

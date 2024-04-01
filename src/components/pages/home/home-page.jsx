@@ -11,11 +11,11 @@ import FooterComponent from "../../sections/footer/footer-component";
 const HomePage = () => {
 	const HomePageDetails = {
 		donate_blood: {
-			subheadingText: "Save Lives Today",
-			headingText: "Donate Blood with HemoCell",
+			subheadingText: " Donate blood, be a lifesaver",
+			headingText: "Maintain a healthy lifestyle and donate blood with Bloodirect",
 			classHint: "side-col-image donate-blood-with-hemocell",
 			paraText:
-				"Our mission is to create a community of donors who make a difference in the lives of others. We prioritize the safety and comfort of our donors and patients, and provide the highest quality of care to ensure an easy and convenient donation process. Join us in our life-saving mission.",
+				"Our Goal is to empower every healthy individual to become a hero by simplifying blood donation, optimizing blood availability, and ensuring timely access for those in urgent need. We revolutionize the way blood is donated, managed, and distributed, saving lives and creating a world where no one faces the fear of inadequate blood supply.",
 			imageUrl: "../../../assets/images/blood-donation(1).jpg",
 			buttonText: "Donate Now",
 			buttonLink: "/donate-blood",
@@ -23,34 +23,35 @@ const HomePage = () => {
 		},
 		quote: {
 			classHint: "quote",
-			quoteText: `“The blood you donate gives someone another chance at life. One day that someone may be a close relative, a friend, a loved one—or even you.”`,
+			quoteText: `“Your blood donation can be a lifeline. Today It helps a stranger And Tomorrow It could save someone you cherish or even you.”`,
 		},
 		why_donate_blood: {
-			subheadingText: "Donate blood today",
-			headingText: "Why should you donate blood?",
+			subheadingText: "Be a Hero Today: Donate Blood!",
+			headingText: "Every drop counts. Here's why you should become a hero:",
 			classHint: "side-col-image why-donate-blood",
-			paraText: `Donating blood is a selfless act that has the power to save lives. Here are a few reasons why you should consider donating blood:
-			\n― You could help save up to three lives with just one donation.
-			― Blood is always needed in emergency situations, such as natural disasters and accidents.
-			― Blood is needed for patients undergoing surgeries, cancer treatment, and other medical procedures.
-			― Blood cannot be manufactured, which means that the only source of blood is through donations from volunteers.
-			― Donating blood can also have health benefits for the donor, such as reducing the risk of heart disease and cancer.`,
+			paraText: `Donating blood is a simple act with a life-changing impact:
+			 ● One donation, multiple heroes. A single pint of blood can help up to three people in need. 
+			 ● The ultimate first responder. Blood is critical in emergencies, accidents, and natural disasters. Be prepared to answer the call. 
+			 ● The gift of healing. Patients undergoing surgery, cancer treatment, and other procedures rely on blood transfusions to fight for their future.
+			 ● An irreplaceable resource. Blood is a precious gift that can't be manufactured. You are the lifeline.
+			 ● A double win for health. Donating blood may even benefit your own health by reducing the risk of certain conditions.`,
 			imageUrl: "../../../assets/images/blood-donation(1).jpg",
 			buttonText: "Donate Now",
 			buttonLink: "/donate-blood",
 			buttonHave: true,
 		},
 		eligiblity_criteria: {
-			subheadingText: "Are you ready?",
-			headingText: "Eligibility Criteria",
+			subheadingText: "To ensure the safety of both donors and recipients here are some criteria for blood donation.",
+			headingText: "Blood Donation Eligibility Criteria:",
 			classHint: "side-col-image eligibility-criteria",
 			paraText: [
-				`18-50 years, above 50 Kg.`,
-				`Normal temperature, pulse and blood pressure.`,
-				`No Respiratory Diseases`,
-				`Above 12.5 g/dL Hemoglobin`,
-				`No skin disease, puncture or scars`,
-				`No history of transmissible disease`,
+				`Age: Minimum age of 18, up to 60`,
+				`Weight: Minimum weight requirement is typically around 110 lbs (50 kg).`,
+				`Health: You must be in good general health and free from any symptoms of illness like fever, cold, or flu.`,
+				`Identification: must have a valid form of photo ID eg NIN, Voters Card, Passport etc`,
+				`Hemoglobin Level: Your hemoglobin level needs to meet a minimum requirement (typically 12.5 g/dL for women and 13.0 g/dL for men).`,
+				`Travel: If you've recently traveled to certain areas with a higher risk of infectious diseases, you may need to wait before donating.`,
+				`Recent Tattoos or Piercings: Wait times vary, but typically you'll need to wait 6 months after getting a tattoo or piercing before donating.`,
 			],
 			imageUrl: "../../../assets/images/blood-donation(1).jpg",
 			buttonText: "Donate Now",
@@ -58,13 +59,13 @@ const HomePage = () => {
 			buttonHave: false,
 		},
 		hero: {
-			subheadingText: "Give the gift of life",
+			subheadingText: "Donate Blood! Give Life!",
 			headingText: "Not all heroes wear capes, Some donate Blood",
 			classHint: "home-page-hero",
 		},
 		stepsText: {
 			subheadingText: "Donation Process",
-			headingText: "Step-by-Step Guide to Donating Blood",
+			headingText: "Easy Steps to Donate Blood",
 		},
 	};
 
@@ -74,21 +75,31 @@ const HomePage = () => {
 			stepNumber: "01",
 			stepName: "Check your eligibility",
 			stepDescription:
-				"Confirm you meet the eligibility requirements to donate blood, such as age, weight, and overall health.",
+				"Head to our quick eligibility quiz to see if you meet the basic requirements to donate blood.",
 		},
 		{
-			key: "schedule-an-appointment",
+			key: "Complete the Donor Form Online",
 			stepNumber: "02",
-			stepName: "Schedule an appointment",
+			stepName: "Complete the Donor Form Online",
 			stepDescription:
-				"Schedule an appointment at a blood bank or blood drive near you.",
+				"Save time by filling out our secure online donor form (link to form) at your convenience.",
 		},
 		{
-			key: "donate-blood",
+			key: "Get Notified of Donation Opportunities",
 			stepNumber: "03",
-			stepName: "Donate Blood",
+			stepName: "Get Notified of Donation Opportunities",
 			stepDescription:
-				"Arrive at the appointment, fill out a questionnaire, and donate blood. The process takes about 10-15 minutes.",
+				"We'll contact you by email, phone call or text (based on your preference) when there's a critical need for your blood type in your area."
+				,
+		},
+		{
+			key: "Schedule Your Donation",
+			stepNumber: "03",
+			stepName: "Schedule Your Donation",
+			stepDescription:
+				"Once notified, you can easily schedule your donation appointment at a convenient location near you (link to appointment scheduler).",
+				
+			
 		},
 	];
 
