@@ -60,28 +60,27 @@ const HostBloodDrivePage = () => {
 	const HostBloodDrivePageDetails = {
 		quote: {
 			classHint: "quote host-drive-quote",
-			quoteText: `“Your decision to partner with us can be the reason someone smiles today, tomorrow, and for many years to come. Let's make a difference together!”`,
+			quoteText: `“Your commitment ripples outward. Partner with us and fuel hope, one blood donation at a time. !”`,
 		},
 		benefits_host_drive: {
-			subheadingText: "Being a Hero",
-			headingText: "Benefits of Partnering with us",
+			subheadingText: "Become a Lifesaver",
+			headingText: "Reasons for Partnering with us",
 			classHint: "side-col-image benefits-host-drive",
-			paraText: `Hosting a blood drive is a great way to give back to your community and help save lives.
-			By providing a convenient location for people to donate, you can help ensure that there is a steady supply of blood for those in need.
-			Blood drives also provide an opportunity for team building and community involvement, and can boost morale and engagement among employees or group members.`,
+			paraText: `By partnering with us you Become a Beacon of Hope by Providing a convenient location for lifesaving donations, ensuring a steady blood supply for those in need.
+		     as well as Fostering community engagement. Blood donation awareness campaigns are a fantastic way to boost morale and connection with donors and receivers.
+			Unlock Inner Heroes Inspire employees, members, or colleagues to embrace their inner hero and make a tangible impact through donation.
+			Together, we can create a powerful wave of generosity and save lives!`,
 			imageUrl: "../../../assets/images/blood-donation(1).jpg",
-			buttonText: "Host Now",
+			buttonText: "Join Us",
 			buttonLink: "/host-blood-drive",
 			buttonHave: true,
 		},
 
 		hosting_blood_drive: {
 			subheadingText: "",
-			headingText: "Hosting the Blood Drive",
+			headingText: "Organizing Blood donation Workshops",
 			classHint: "side-col-image hosting-blood-drive",
-			paraText: `On the day of the blood drive, it's important to ensure that everything runs smoothly and that donors have a positive experience.
-			Make sure you have enough volunteers to help with registration, refreshments, and donor follow-up.
-			Provide a comfortable and welcoming environment for donors, and ensure that all equipment is properly sanitized and maintained.`,
+			paraText: `Participate in a hero-making event!  Assemble a friendly volunteer team to manage registration, refreshments, and donor support.  Create a comfortable and welcoming environment with clear information and positive vibes.  Most importantly, prioritize safety by maintaining the highest hygiene standards and ensuring all equipment is sanitized and in top condition.  By focusing on both a smooth experience and donor comfort, you can turn your blood drive into a day of life-saving success!`,
 			imageUrl: "../../../assets/images/blood-donation(1).jpg",
 			buttonText: "Host Now",
 			buttonLink: "/host-blood-drive",
@@ -89,13 +88,13 @@ const HostBloodDrivePage = () => {
 		},
 
 		hero: {
-			subheadingText: "Join us to save lives",
-			headingText: "Partner with us, together we can save lives",
+			subheadingText: "Partner with us to save lives",
+			headingText: "Together, we can build a healthier community.",
 			classHint: "host-blood-drive-page-hero",
 		},
 		stepsText: {
-			subheadingText: "Guide for Hosting",
-			headingText: "Promoting Your Blood Drive",
+			subheadingText: "Spread the word and watch the heroes line up!",
+			headingText: "Help Promote Us",
 		},
 	};
 
@@ -103,22 +102,43 @@ const HostBloodDrivePage = () => {
 		{
 			key: "promote-widely",
 			stepNumber: "01",
-			stepName: "Promote Widely",
+			stepName: "Social Media Blitz ",
 			stepDescription:
-				"Use social media, flyers, and emails to spread the word.",
+				"Post on Facebook, Instagram, Twitter with compelling visuals about saving lives.",
 		},
 		{
 			key: "emphasize-benefits",
 			stepNumber: "02",
-			stepName: "Emphasize Benefits",
-			stepDescription: "Highlight the positive impact donors can make.",
+			stepName: "Email Blast",
+			stepDescription: "Reach out to your network and local groups, emphasize the urgency and positive impact.",
 		},
 		{
 			key: "varity-of-channels",
 			stepNumber: "03",
-			stepName: "Variety of Channels",
+			stepName: "Flyers & Posters",
 			stepDescription:
-				"Use multiple marketing channels to reach potential donors.",
+				"Catchy visuals and clear donation information placed in high-traffic areas.",
+		},
+		{
+			key: "promote-widely",
+			stepNumber: "04",
+			stepName: "Life-Saving Impact",
+			stepDescription:
+				"Every donation counts! Highlight how the drive will benefit your community.",
+		},
+		{
+			key: "promote-widely",
+			stepNumber: "05",
+			stepName: "Quick & Easy",
+			stepDescription:
+				"Simplify the process. Share testimonials about the ease of donating blood.",
+		},
+		{
+			key: "promote-widely",
+			stepNumber: "06",
+			stepName: "Fun Atmosphere",
+			stepDescription:
+				"Offer refreshments, contests, or giveaways to create a positive experience.",
 		},
 	];
 

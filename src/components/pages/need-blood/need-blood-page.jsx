@@ -62,19 +62,18 @@ const NeedBloodPage = () => {
 	const NeedBloodPageDetails = {
 		quote: {
 			classHint: "quote need-blood-quote",
-			quoteText: `Facing a blood emergency?\n 
-            Request a callback and let us help you!`,
+			quoteText: `Need Blood Fast? Don't Worry. We Can Help. Request a Callback for Swift Assistance`,
 			buttonText: "Call Now",
-			buttonLink: "tel:+920304050607",
+			buttonLink: "tel:+2349024177393",
 			buttonHave: true,
 		},
 		tips_for_managing_blood_loss: {
 			subheadingText: "",
-			headingText: "Tips for Managing Blood Loss",
+			headingText: "Replenish and Relax After Your Transfusion",
 			classHint: "tips-for-managing-blood-loss",
 			paraText: [
-				`Stay calm and avoid any strenuous activity.`,
-				`Elevate the affected area if possible to reduce blood flow.`,
+				`Hydrate: Drink plenty of fluids (water, juice) throughout the day to replace lost fluids.`,
+				`Eat Well: Enjoy a healthy meal or snack to replenish energy levels.`,
 				`Apply pressure to the wound to slow down or stop the bleeding.`,
 				`Drink fluids such as water or sports drinks to help replenish lost fluids.`,
 				`Consume foods that are high in iron and protein, such as spinach, beans, and lean meats to help replenish lost nutrients.`,
@@ -85,17 +84,17 @@ const NeedBloodPage = () => {
 			buttonHave: false,
 		},
 		hero: {
-			subheadingText: "Need blood?",
-			headingText: "Your blood needs are our priority.",
+			subheadingText: "Need Blood Donation?",
+			headingText: "Let Us Find a Match for You.",
 			classHint: "hero need-blood-page-hero",
 		},
 		stepsText: {
-			subheadingText: "Collecting Blood",
-			headingText: "From start to finish, here's what to expect.",
+			subheadingText: "Receiving Blood",
+			headingText: "Here's What to Expect During Blood Transfusion",
 		},
 		bloodStock: {
-			subheadingText: "When you need it",
-			headingText: "Find Available Blood Stock",
+			subheadingText: "What do you need?",
+			headingText: "Search Blood Groups",
 			classHint: "search-blood-stock",
 		},
 	};
@@ -104,23 +103,23 @@ const NeedBloodPage = () => {
 		{
 			key: "registration",
 			stepNumber: "01",
-			stepName: "Registration",
+			stepName: "Quick Registration",
 			stepDescription:
-				"You will be asked to fill out a form with your personal information and medical history.",
+				"Fill out a form with your basic information and medical history.",
 		},
 		{
 			key: "screening",
 			stepNumber: "02",
-			stepName: "Screening",
+			stepName: "Confidential Screening",
 			stepDescription:
-				"A medical professional will check your vitals and ask you a series of questions to ensure you are eligible to donate.",
+				"A healthcare professional will check your vitals and ask health questions to ensure eligibility.",
 		},
 		{
 			key: "donation",
 			stepNumber: "03",
-			stepName: "Donation",
+			stepName: "Comfortable Donation",
 			stepDescription:
-				"A sterile needle will be inserted into your arm to collect your blood, which will then be stored and used for transfusions.",
+				"Relax while a sterile needle collects your blood for life-saving transfusions.",
 		},
 	];
 

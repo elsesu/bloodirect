@@ -30,7 +30,7 @@ const SearchBloodStockComponent = ({
 							value={bloodGroup}
 						>
 							<option value="" selected disabled hidden>
-								--Select Blood Group--
+								--Blood Group--
 							</option>
 							<option value="A+">A+</option>
 							<option value="A-">A-</option>
@@ -42,7 +42,7 @@ const SearchBloodStockComponent = ({
 							<option value="O-">O-</option>
 						</select>
 						<button className="sm:col-span-2 sm:rounded-r-rsm border-dark text-white bg-dark hover:border-dark hover:bg-dark_red hover:text-white transition text-black px-8 py-5 text-sm font-bold">
-							Search Availability
+							Search
 						</button>
 					</form>
 
