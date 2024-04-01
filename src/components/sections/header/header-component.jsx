@@ -17,7 +17,7 @@ const navigation = [
 ];
 // const logoUrl = "../public/HemoCell Logo black.png";
 // const logoUrlWhite = "../public/HemoCell Logo White.png";
-const compnayName = "HemoCell Blood Bank";
+const compnayName = " Bloodirect";
 
 const HeaderComponent = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

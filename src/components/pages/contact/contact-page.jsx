@@ -96,22 +96,22 @@ const ContactPage = () => {
 			key: "phone",
 			stepNumber: <FaPhoneAlt />,
 			stepName: "Phone",
-			stepDescription: "(+92)-333-123-4567",
-			stepUrl: "tel:+923331234567",
+			stepDescription: "(+234)-902-417-7393",
+			stepUrl: "tel:+2349024177393",
 		},
 		{
 			key: "email",
 			stepNumber: <MdEmail />,
 			stepName: "Email",
-			stepDescription: "help@hemocell.com",
-			stepUrl: "mailto:help@hemocell.com",
+			stepDescription: "itsmason58@gmail.com",
+			stepUrl: "mailto:itsmason58@gmail.com",
 		},
 		{
 			key: "address",
 			stepNumber: <FaMapMarkerAlt />,
 			stepName: "Address",
-			stepDescription: "Karachi, Sindh, Pakistan",
-			stepUrl: "https://goo.gl/maps/sszR4K9aDKuYfy2Y8",
+			stepDescription: "FCT, Abuja, Nigeria",
+			stepUrl: "https://g.co/kgs/oFrPif3",
 		},
 	];
 
