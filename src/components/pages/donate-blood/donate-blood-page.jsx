@@ -5,67 +5,51 @@ import SideBySideComponent from "../../sections/side-by-side/side-by-side-compon
 import QuoteComponent from "../../sections/quote/quote-component";
 import CriteriaComponent from "../../sections/criteria/criteria-component";
 import FormComponent from "../../sections/form/form-component";
-
 import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
-
-import newUsersInsertRequest from "../../utility-functions/new-users-insert-request";
-
-import Axios from "axios";
+import { db } from "../../../firebase.config";
+import { addDoc, collection } from "firebase/firestore"; 
 
 const DonateBloodPage = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
 		phone: "",
-		bloodType: "",
+		blood_type: "",
 		state: "",
 		lga:"",
 		address: "",
 
 	});
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
 
-		// check if any field is empty then return from here
-		// if (!formData.name || !formData.email || !formData.phone) {
-		// 	return;
-		// }
 
-		console.log("success");
-
-		Axios.post("http://localhost:3001/create-donate-blood", {
+	const handleDonate = async () => {
+		try {
+		  const docRef = await addDoc(collection(db, "donate"), {
 			name: formData.name,
 			email: formData.email,
 			phone: formData.phone,
-			bloodType: formData.bloodType,
+			blood_type: formData.blood_type,
 			state: formData.state,
 			lga: formData.lga,
 			address: formData.address
-			
-		})
-			.then((response) => {
-				console.log("success");
-				console.log(response.data);
-			})
-			.catch((error) => {
-				console.log(error, 'not found');
-			});
-
-		newUsersInsertRequest(formData, "donate-blood");
-
-		setFormData({
+		  });
+		  console.log("Document written with ID: ", docRef.id);
+		  setFormData({
 			name: "",
 			email: "",
 			phone: "",
-			bloodType: "",
+			blood_type: "",
 			state: "",
 			address: "",
 			lga: "",
-		});
-	};
+		  });
+		} catch (error) {
+		  console.log(error, 'there was an error');
+		}
+	  };
 
 	const DonateBloodPageDetails = {
 		quote: {
@@ -163,8 +147,8 @@ const DonateBloodPage = () => {
 			required: true,
 		},
 		{
-			key: "bloodType",
-			name: "bloodType",
+			key: "blood_type",
+			name: "blood_type",
 			type: "text",
 			placeholder: "Blood Type",
 			required: true,
@@ -201,7 +185,7 @@ const DonateBloodPage = () => {
 				fields={fields}
 				heading={"Schedule an Appointment"}
 				buttonText={"Schedule an Appointment"}
-				handleSubmit={handleSubmit}
+				handleDonate={handleDonate}
 				formData={formData}
 				setFormData={setFormData}
 			/>

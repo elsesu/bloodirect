@@ -1,8 +1,9 @@
+import React from 'react'
 import { useState } from "react";
 import "./form-component-styles.scss";
 import WrapperSection from "../wrapper-section/wrapper-section-component";
 
-const FormComponent = ({
+const FormRequest = ({
 	fields,
 	heading,
 	buttonText,
@@ -11,10 +12,14 @@ const FormComponent = ({
 	handleRequest,
 	handleDonate
 }) => {
-	const [status, setStatus] = useState("Pending");
+
+    const [status, setStatus] = useState("Pending");
 	const inputStyles = `block w-full flex justify-start items-start rounded-rsm border-0 px-8 py-3 md:px-10 md:py-4 bg-light text-white ring-none placeholder:text-white outline-none focus:ring-1 focus:ring-center focus:bg-dark focus:ring-light sm:text-sm sm:leading-6`;
-	return (
-		<WrapperSection>
+
+
+
+  return (
+    <WrapperSection>
 			<div
 				className={`form-wrapper -mt-[10em] w-full relative p-6 py-10 lg:p-20 lg:pb-10 rounded-rmd z-[25] overflow-hidden`}
 			>
@@ -30,7 +35,7 @@ const FormComponent = ({
 					<form
 						className="contact-form grid grid-cols-1 sm:grid-cols-2 gap-5 w-full relative sm:p-6 py-8 sm:p-10 rounded-rmd z-[25] overflow-hidden"
 						// method="POST"
-						onSubmit={handleDonate}
+						onSubmit={handleRequest}
 					>
 						{fields.map((field, index) => (
 							<input
@@ -56,7 +61,7 @@ const FormComponent = ({
 								type="submit"
 								name="submit"
 								onClick={(e) => {
-									handleDonate(e);
+									handleRequest(e);
 									setStatus("Submited");
 								}}
 								className={` rounded-rsm border border-white hover:border-red text-dark bg-white hover:bg-red hover:text-white transition px-10 py-4 text-sm w-fit font-bold w-fit cursor-pointer`}
@@ -82,7 +87,7 @@ const FormComponent = ({
 				)}
 			</div>
 		</WrapperSection>
-	);
-};
+  )
+}
 
-export default FormComponent;
+export default FormRequest

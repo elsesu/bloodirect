@@ -3,61 +3,63 @@ import HeroComponent from "../../sections/hero/hero-component";
 import ThreeStepProcessComponent from "../../sections/three-step-process/three-step-process-component";
 import QuoteComponent from "../../sections/quote/quote-component";
 import CriteriaComponent from "../../sections/criteria/criteria-component";
-import FormComponent from "../../sections/form/form-component";
 import SearchBloodStockComponent from "../../sections/search-blood-stock/search-blood-stock-component";
 import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
-
-import Axios from "axios";
-import newUsersInsertRequest from "../../utility-functions/new-users-insert-request";
+import FormRequest from "../../sections/form/FormRequest";
+import {  db } from "../../../firebase.config";
+import { addDoc, collection } from "firebase/firestore";
 
 const NeedBloodPage = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
 		phone: "",
-		bloodType: "",
+		blood_type: "",
 		state: "",
 		lga: "",
 		current_hospital_address: "",
 	});
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
+/*
+const addData = async (formData) => {
+    try {
+      const docRef = await addDoc(collection(db, "users"), formData);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+  */
 
-		console.log(formData);
 
-		Axios.post("http://localhost:3001/create-need-blood", {
-			name: formData.name,
-			email: formData.email,
-			phone: formData.phone,
-			bloodType: formData.bloodType,
-			state: formData.state,
-			lga: formData.lga,
-			current_hospital_address: formData.current_hospital_address,
-		})
-			.then((response) => {
-				console.log("success");
-				console.log(response.data);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
+const handleRequest = async () => {
+	try {
+	  const docRef = await addDoc(collection(db, "request"), {
+		name: formData.name,
+		email: formData.email,
+		phone: formData.phone,
+		bloodType: formData.blood_type,
+		state: formData.state,
+		lga: formData.lga,
+		current_hospital_address: formData.current_hospital_address,
+	  });
+	  console.log("Document written with ID: ", docRef.id);
+	  setFormData({
+		name: "",
+		email: "",
+		phone: "",
+		blood_type: "",
+		state: "",
+		current_hospital_address: "",
+		lga: "",
+	  });
+	} catch (error) {
+	  console.log(error, 'there was an error');
+	}
+  };
 
-		newUsersInsertRequest(formData, "need-blood");
-
-		setFormData({
-			name: "",
-			email: "",
-			phone: "",
-			bloodType: "",
-			state: "",
-		    lga: "",
-		    current_hospital_address: "",
-			
-		});
-	};
 
 	const NeedBloodPageDetails = {
 		quote: {
@@ -146,8 +148,8 @@ const NeedBloodPage = () => {
 			required: true,
 		},
 		{
-			key: "bloodType",
-			name: "bloodType",
+			key: "blood_type",
+			name: "blood_type",
 			type: "text",
 			placeholder: "Blood Type",
 			required: true,
@@ -180,11 +182,11 @@ const NeedBloodPage = () => {
 			<HeaderComponent />
 
 			<HeroComponent {...NeedBloodPageDetails.hero} />
-			<FormComponent
+			<FormRequest
 				fields={fields}
 				heading={"Request for emergency blood"}
 				buttonText={"Request blood"}
-				handleSubmit={handleSubmit}
+				handleRequest={handleRequest}
 				formData={formData}
 				setFormData={setFormData}
 			/>
