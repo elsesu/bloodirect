@@ -99,6 +99,7 @@ const FormComponent = ({
 						 onChange={(e) => setBloodType(e.target.value)}
 						 required
 						  className={inputStyles}>
+							<option value="select">--Select Blood Group</option>
 							<option value="0-">0-</option>
 							<option value="0+">0+</option>
 							<option value="A-">A-</option>
