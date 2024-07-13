@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HeroComponent from "../../sections/hero/hero-component";
-import FormComponent from "../../sections/form/form-component";
+import ContactComponent from "../../sections/contact/ContactComponent";
 import ContactDetailsComponent from "../../sections/details/details-component";
 import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
@@ -10,47 +10,12 @@ import Axios from "axios";
 
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import newUsersInsertRequest from "../../utility-functions/new-users-insert-request";
+
 
 const ContactPage = () => {
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		phone: "",
-		reason: "",
-		message: "",
-	});
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
 
-		console.log(formData);
 
-		Axios.post("http://localhost:3001/create-need-help", {
-			name: formData.name,
-			email: formData.email,
-			phone: formData.phone,
-			reason: formData.reason,
-			message: formData.message,
-		})
-			.then((response) => {
-				console.log("success");
-				console.log(response.data);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-
-		newUsersInsertRequest(formData, "need-help");
-
-		setFormData({
-			name: "",
-			email: "",
-			phone: "",
-			reason: "",
-			message: "",
-		});
-	};
 
 	const ContactPageDetails = {
 		hero: {
@@ -60,36 +25,6 @@ const ContactPage = () => {
 		},
 	};
 
-	const fields = [
-		{
-			key: "name",
-			name: "name",
-			type: "text",
-			placeholder: "Name",
-			required: true,
-		},
-		{
-			key: "email",
-			name: "email",
-			type: "email",
-			placeholder: "Email",
-			required: true,
-		},
-		{
-			key: "phone",
-			name: "phone",
-			type: "tel",
-			placeholder: "Phone",
-			required: true,
-		},
-		{
-			key: "reason",
-			name: "reason",
-			type: "text",
-			placeholder: "Reason",
-			required: false,
-		},
-	];
 
 	const contactDetails = [
 		{
@@ -120,13 +55,11 @@ const ContactPage = () => {
 			<HeaderComponent />
 
 			<HeroComponent {...ContactPageDetails.hero} />
-			<FormComponent
-				fields={fields}
+			<ContactComponent
+			
 				heading={"We're to help"}
 				buttonText={"Send Message"}
-				handleSubmit={handleSubmit}
-				formData={formData}
-				setFormData={setFormData}
+				
 			/>
 			<ContactDetailsComponent contactDetails={contactDetails} />
 			<BeforeFooterCTA />
