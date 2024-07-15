@@ -13,14 +13,16 @@ import bloodlogs from "../../../assets/images/White logo - no background 2.png"
 
 const HeaderComponent = () => {
 const {user} = useAuth()
+
+const mail = user?.email ? user.email.charAt(0).toUpperCase(): '';
 const navigation = [
 	{ name: "Home", href: "/" },
 	{ name: "Partner With Us", href: "/host-blood-drive" },
-	{ name: "Donate Money", href: "https://donorbox.org/donate-money-11" },
 	{ name: "Contact Us", href: "/contact" },
-	...(user ? [{ name: user.email, href: "#" }] : [{name: 'Sign Up', href:'/sign-up'}]),
-	{ name: "Need Blood", href: "/need-blood", secondLast: true },
-	{ name: "Donate Blood", href: "/donate-blood", last: true },
+	...(user ? [{ name: mail, href: "#" }] : [{name: 'Login', href:'/login'}]),
+	...(user ? [{name: "Need Blood", href: "/need-blood", secondLast: true }]:[{name: "Need Blood", href: "/sign-up", secondLast: true }]),
+	...(user ? [{name: "Donate Blood", href: "/donate-blood", last: true}]:[{name: "Donate Blood", href: "/sign-up", last: true}])
+
 
 ];
 // const logoUrl = "../public/HemoCell Logo black.png";
