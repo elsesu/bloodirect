@@ -18,7 +18,7 @@ const navigation = [
 	{ name: "Partner With Us", href: "/host-blood-drive" },
 	{ name: "Donate Money", href: "https://donorbox.org/donate-money-11" },
 	{ name: "Contact Us", href: "/contact" },
-	...(user ? [{ name: user.email, href: "#" }] : []),
+	...(user ? [{ name: user.email, href: "#" }] : [{name: 'Sign Up', href:'/sign-up'}]),
 	{ name: "Need Blood", href: "/need-blood", secondLast: true },
 	{ name: "Donate Blood", href: "/donate-blood", last: true },
 
