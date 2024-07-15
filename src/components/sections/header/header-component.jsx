@@ -3,24 +3,33 @@ import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, NavLink } from "react-router-dom";
-
+import { useAuth } from "../../hooks/useAuth";
 import BlackLogo from "../../../../public/HemoCell Logo black.png";
 import WhiteLogo from "../../../../public/HemoCell Logo White.png";
 import bloodlogs from "../../../assets/images/White logo - no background 2.png"
 
+
+
+
+const HeaderComponent = () => {
+const {user} = useAuth()
 const navigation = [
 	{ name: "Home", href: "/" },
 	{ name: "Partner With Us", href: "/host-blood-drive" },
 	{ name: "Donate Money", href: "https://donorbox.org/donate-money-11" },
 	{ name: "Contact Us", href: "/contact" },
+	...(user ? [{ name: user.email, href: "#" }] : []),
 	{ name: "Need Blood", href: "/need-blood", secondLast: true },
 	{ name: "Donate Blood", href: "/donate-blood", last: true },
+
 ];
 // const logoUrl = "../public/HemoCell Logo black.png";
 // const logoUrlWhite = "../public/HemoCell Logo White.png";
 const compnayName = " Bloodirect";
 
-const HeaderComponent = () => {
+	
+
+	
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [offset, setOffset] = useState(0);
 	const [blurActivation, setBlurActivation] = useState(false);

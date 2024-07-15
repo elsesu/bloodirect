@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import WrapperSection from '../wrapper-section/wrapper-section-component';
 import { useAuth } from '../../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
@@ -17,6 +17,8 @@ const LoginCard = ({
     const {
         SignIn,
         SignWithPop,
+        getUser,
+        user,
     } = useAuth()
 
     const formData = {
@@ -33,6 +35,7 @@ const LoginCard = ({
         }
         SignIn(formData)
         Navigate('/')
+
     }
 
     const handleSignInWithPop = ()=>{
@@ -40,6 +43,13 @@ const LoginCard = ({
         Navigate('/')
     };
 
+
+
+    useEffect(() => {
+        console.log(user)
+    }, [])
+
+   
 
 	const inputStyles = `block w-full flex justify-start items-start rounded-rsm border-0 px-8 py-3 md:px-10 md:py-4 bg-light text-white ring-none placeholder:text-white outline-none focus:ring-1 focus:ring-center focus:bg-dark focus:ring-light sm:text-sm sm:leading-6`;
     const inputStyles1 = `block w-full flex justify-start items-start rounded-rsm border-0 px-8 py-3 md:px-10 md:py-4 bg-light text-white ring-none placeholder:text-white outline-none focus:ring-1 focus:ring-center focus:bg-dark focus:ring-light sm:text-sm sm:leading-6 h-[200px]`;
