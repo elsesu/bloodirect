@@ -3,12 +3,15 @@ import { useState } from "react";
 import WrapperSection from "../wrapper-section/wrapper-section-component";
 import { db } from '../../../firebase.config';
 import { addDoc, collection } from 'firebase/firestore';
+import { useAuth } from '../../hooks/useAuth';
 
 const ContactComponent = ({
 	heading,
 	buttonText,
 
 }) => {
+
+    const {user} = useAuth();
     const [status, setStatus] = useState("Pending");
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -39,7 +42,7 @@ const ContactComponent = ({
 			console.log(error, 'there was an error');
 		  }
 	};
-  const disable = !name || !reason || !email || !message
+  const disable = !name || !reason || !email || !message;
     return (
     <WrapperSection>
     <div

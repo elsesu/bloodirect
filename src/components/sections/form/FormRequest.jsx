@@ -4,11 +4,17 @@ import "./form-component-styles.scss";
 import WrapperSection from "../wrapper-section/wrapper-section-component";
 import { db } from '../../../firebase.config';
 import { addDoc, collection } from 'firebase/firestore';
+import { useAuth } from '../../hooks/useAuth';
+
+
+
 const FormRequest = ({
 	heading,
 	buttonText,
 
 }) => {
+
+	const {user} = useAuth();
 	const [name, setName] =  useState('')
 	const [email, setEmail] =  useState('')
 	const [phone, setPhone] =  useState('')
@@ -32,7 +38,7 @@ const FormRequest = ({
 		lga,
 	 }
 
-	 const disable = !name || !email || !phone || !blood_type || !state || !current_hospital_address || !lga;
+	 const disable = !name || !email || !phone || !blood_type || !state || !current_hospital_address || !lga || !user;
 
 	const handleRequest = async () => {
 		try {

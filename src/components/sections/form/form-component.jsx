@@ -3,12 +3,14 @@ import "./form-component-styles.scss";
 import WrapperSection from "../wrapper-section/wrapper-section-component";
 import { db } from "../../../firebase.config";
 import { addDoc, collection } from "firebase/firestore";
+import { useAuth } from "../../hooks/useAuth";
 
 const FormComponent = ({
 	heading,
 	buttonText,
 }) => {
 
+	const {user} = useAuth()
 	
      const [name, setName] =  useState('')
 	 const [email, setEmail] =  useState('')
@@ -28,7 +30,7 @@ const FormComponent = ({
 		lga,
 	 }
 
-	 const disable = !name || !email || !phone || !blood_type || !state || !address || !lga;
+	 const disable = !name || !email || !phone || !blood_type || !state || !address || !lga || !user;
 
 	 const handleDonate = async () => {
 		try {
