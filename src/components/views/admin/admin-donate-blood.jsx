@@ -25,7 +25,7 @@ export default function AdminDonateBlood() {
 
 	// useEffect(() => {
 	// 	axios
-	// 		.get("http://localhost:3001/api/donate-blood")
+	// 		.get("http://localhost:5173/api/donate-blood")
 	// 		.then((response) => {
 	// 			setData(response.data);
 	// 		})
@@ -93,7 +93,7 @@ export default function AdminDonateBlood() {
 		let status = !item.donated;
 
 		axios
-			.put(`http://localhost:3001/api/donate-blood/donated`, {
+			.put(`http://localhost:5173/api/donate-blood/donated`, {
 				status,
 				id,
 			})
@@ -111,7 +111,7 @@ export default function AdminDonateBlood() {
 
 	const handleDelete = (id) => {
 		axios
-			.delete(`http://localhost:3001/api/donate-blood/delete/${id}`)
+			.delete(`http://localhost:5173/api/donate-blood/delete/${id}`)
 			.then((response) => {
 				setData(data.filter((item) => item.id !== id));
 			})
@@ -122,7 +122,7 @@ export default function AdminDonateBlood() {
 
 	const handleUpdateClick = (id) => {
 		axios
-			.put(`http://localhost:3001/api/donate-blood/update/${id}`, {
+			.put(`http://localhost:5173/api/donate-blood/update/${id}`, {
 				updatedData,
 			})
 			.then((response) => {

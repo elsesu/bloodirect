@@ -8,22 +8,13 @@ import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
 import FormRequest from "../../sections/form/FormRequest";
-import {  db } from "../../../firebase.config";
-import { addDoc, collection } from "firebase/firestore";
+
 
 const NeedBloodPage = () => {
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		phone: "",
-		blood_type: "",
-		state: "",
-		lga: "",
-		current_hospital_address: "",
-	});
-
+	
 /*
 const addData = async (formData) => {
+	//not found
     try {
       const docRef = await addDoc(collection(db, "users"), formData);
       console.log("Document written with ID: ", docRef.id);
@@ -34,31 +25,6 @@ const addData = async (formData) => {
   */
 
 
-const handleRequest = async () => {
-	try {
-	  const docRef = await addDoc(collection(db, "request"), {
-		name: formData.name,
-		email: formData.email,
-		phone: formData.phone,
-		bloodType: formData.blood_type,
-		state: formData.state,
-		lga: formData.lga,
-		current_hospital_address: formData.current_hospital_address,
-	  });
-	  console.log("Document written with ID: ", docRef.id);
-	  setFormData({
-		name: "",
-		email: "",
-		phone: "",
-		blood_type: "",
-		state: "",
-		current_hospital_address: "",
-		lga: "",
-	  });
-	} catch (error) {
-	  console.log(error, 'there was an error');
-	}
-  };
 
 
 	const NeedBloodPageDetails = {
@@ -125,57 +91,6 @@ const handleRequest = async () => {
 		},
 	];
 
-	const fields = [
-		{
-			key: "name",
-			name: "name",
-			type: "text",
-			placeholder: "Name",
-			required: true,
-		},
-		{
-			key: "email",
-			name: "email",
-			type: "email",
-			placeholder: "Email",
-			required: true,
-		},
-		{
-			key: "phone",
-			name: "phone",
-			type: "tel",
-			placeholder: "Phone",
-			required: true,
-		},
-		{
-			key: "blood_type",
-			name: "blood_type",
-			type: "text",
-			placeholder: "Blood Type",
-			required: true,
-		},
-		{
-			key: "state",
-			name: "state",
-			type: "text",
-			placeholder: "State",
-			required: true,
-		},
-		{
-			key: "lga",
-			name: "lga",
-			type: "text",
-			placeholder: "Local Government",
-			required: true,
-		},
-		{
-			key: "current_hospital_address",
-			name: "current_hospital_address",
-			type: "text",
-			placeholder: "current Hospital Address",
-			required: true,
-		},
-	];
 
 	return (
 		<>
@@ -183,12 +98,10 @@ const handleRequest = async () => {
 
 			<HeroComponent {...NeedBloodPageDetails.hero} />
 			<FormRequest
-				fields={fields}
+				
 				heading={"Request for emergency blood"}
 				buttonText={"Request blood"}
-				handleRequest={handleRequest}
-				formData={formData}
-				setFormData={setFormData}
+			
 			/>
 			<QuoteComponent {...NeedBloodPageDetails.quote} />
 			<SearchBloodStockComponent {...NeedBloodPageDetails.bloodStock} />

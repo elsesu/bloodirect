@@ -27,7 +27,7 @@ export default function AdminHostBloodDrive() {
 
 	// useEffect(() => {
 	// 	axios
-	// 		.get("http://localhost:3001/api/host-blood-drive")
+	// 		.get("http://localhost:5173/api/host-blood-drive")
 	// 		.then((response) => {
 	// 			setData(response.data);
 	// 		})
@@ -97,7 +97,7 @@ export default function AdminHostBloodDrive() {
 		let status = !item.done;
 
 		axios
-			.put(`http://localhost:3001/api/host-blood-drive/done`, {
+			.put(`http://localhost:5173/api/host-blood-drive/done`, {
 				status,
 				id,
 			})
@@ -115,7 +115,7 @@ export default function AdminHostBloodDrive() {
 
 	const handleDelete = (id) => {
 		axios
-			.delete(`http://localhost:3001/api/host-blood-drive/delete/${id}`)
+			.delete(`http://localhost:5173/api/host-blood-drive/delete/${id}`)
 			.then((response) => {
 				setData(data.filter((item) => item.id !== id));
 			})
@@ -126,7 +126,7 @@ export default function AdminHostBloodDrive() {
 
 	const handleUpdateClick = (id) => {
 		axios
-			.put(`http://localhost:3001/api/host-blood-drive/update/${id}`, {
+			.put(`http://localhost:5173/api/host-blood-drive/update/${id}`, {
 				updatedData,
 			})
 			.then((response) => {
