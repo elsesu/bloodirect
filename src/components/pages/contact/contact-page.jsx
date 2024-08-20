@@ -1,26 +1,11 @@
 import { useState } from "react";
 import HeroComponent from "../../sections/hero/hero-component";
-<<<<<<< HEAD
-import ContactComponent from "../../sections/contact/ContactComponent";
-=======
 import FormComponent from "../../sections/form/form-component";
->>>>>>> master
 import ContactDetailsComponent from "../../sections/details/details-component";
 import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
 
-<<<<<<< HEAD
-
-import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-
-
-const ContactPage = () => {
-
-
-
-=======
 import Axios from "axios";
 
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
@@ -66,7 +51,6 @@ const ContactPage = () => {
 			message: "",
 		});
 	};
->>>>>>> master
 
 	const ContactPageDetails = {
 		hero: {
@@ -76,8 +60,6 @@ const ContactPage = () => {
 		},
 	};
 
-<<<<<<< HEAD
-=======
 	const fields = [
 		{
 			key: "name",
@@ -108,7 +90,6 @@ const ContactPage = () => {
 			required: false,
 		},
 	];
->>>>>>> master
 
 	const contactDetails = [
 		{
@@ -139,13 +120,6 @@ const ContactPage = () => {
 			<HeaderComponent />
 
 			<HeroComponent {...ContactPageDetails.hero} />
-<<<<<<< HEAD
-			<ContactComponent
-			
-				heading={"We're to help"}
-				buttonText={"Send Message"}
-				
-=======
 			<FormComponent
 				fields={fields}
 				heading={"We're to help"}
@@ -153,7 +127,6 @@ const ContactPage = () => {
 				handleSubmit={handleSubmit}
 				formData={formData}
 				setFormData={setFormData}
->>>>>>> master
 			/>
 			<ContactDetailsComponent contactDetails={contactDetails} />
 			<BeforeFooterCTA />

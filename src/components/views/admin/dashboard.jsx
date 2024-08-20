@@ -23,11 +23,7 @@ const Dashboard = () => {
 
 	// useEffect(() => {
 	// 	axios
-<<<<<<< HEAD
-	// 		.get("http://localhost:5173/api/dashboard")
-=======
 	// 		.get("http://localhost:3001/api/dashboard")
->>>>>>> master
 	// 		.then((response) => {
 	// 			setData(response.data);
 	// 		})
@@ -120,11 +116,7 @@ const Dashboard = () => {
 		let status = !item.checked;
 
 		axios
-<<<<<<< HEAD
-			.put(`http://localhost:5173/api/new-users/checked`, {
-=======
 			.put(`http://localhost:3001/api/new-users/checked`, {
->>>>>>> master
 				status,
 				id,
 			})
@@ -142,11 +134,7 @@ const Dashboard = () => {
 
 	const handleDelete = (id) => {
 		axios
-<<<<<<< HEAD
-			.delete(`http://localhost:5173/api/dashboard/delete/${id}`)
-=======
 			.delete(`http://localhost:3001/api/dashboard/delete/${id}`)
->>>>>>> master
 			.then((response) => {
 				setData(data.filter((item) => item.id !== id));
 			})

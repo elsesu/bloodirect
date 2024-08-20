@@ -93,11 +93,7 @@ export default function AdminNeedBlood() {
 		let status = !item.given;
 
 		axios
-<<<<<<< HEAD
-			.put(`http://localhost:5173/api/need-blood/given`, {
-=======
 			.put(`http://localhost:3001/api/need-blood/given`, {
->>>>>>> master
 				status,
 				id,
 			})
@@ -115,11 +111,7 @@ export default function AdminNeedBlood() {
 
 	const handleDelete = (id) => {
 		axios
-<<<<<<< HEAD
-			.delete(`http://localhost:5173/api/need-blood/delete/${id}`)
-=======
 			.delete(`http://localhost:3001/api/need-blood/delete/${id}`)
->>>>>>> master
 			.then((response) => {
 				setData(data.filter((item) => item.id !== id));
 			})
@@ -130,11 +122,7 @@ export default function AdminNeedBlood() {
 
 	const handleUpdateClick = (id) => {
 		axios
-<<<<<<< HEAD
-			.put(`http://localhost:5173/api/need-blood/update/${id}`, {
-=======
 			.put(`http://localhost:3001/api/need-blood/update/${id}`, {
->>>>>>> master
 				updatedData,
 			})
 			.then((response) => {

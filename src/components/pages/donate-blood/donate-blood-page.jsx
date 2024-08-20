@@ -8,12 +8,6 @@ import FormComponent from "../../sections/form/form-component";
 import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
-<<<<<<< HEAD
-
-
-const DonateBloodPage = () => {
-	
-=======
 import { db } from "../../../firebase.config";
 import { addDoc, collection } from "firebase/firestore"; 
 
@@ -57,7 +51,6 @@ const DonateBloodPage = () => {
 		}
 	  };
 
->>>>>>> master
 	const DonateBloodPageDetails = {
 		quote: {
 			classHint: "quote",
@@ -131,9 +124,6 @@ const DonateBloodPage = () => {
 		},
 	];
 
-<<<<<<< HEAD
-	
-=======
 	const fields = [
 		{
 			key: "name",
@@ -186,24 +176,18 @@ const DonateBloodPage = () => {
 		},
 	];
 
->>>>>>> master
 	return (
 		<>
 			<HeaderComponent />
 
 			<HeroComponent {...DonateBloodPageDetails.hero} />
 			<FormComponent
-<<<<<<< HEAD
-				heading={"Schedule an Appointment"}
-				buttonText={"Schedule an Appointment"}
-=======
 				fields={fields}
 				heading={"Schedule an Appointment"}
 				buttonText={"Schedule an Appointment"}
 				handleDonate={handleDonate}
 				formData={formData}
 				setFormData={setFormData}
->>>>>>> master
 			/>
 			<ThreeStepProcessComponent
 				stepsText={DonateBloodPageDetails.stepsText}

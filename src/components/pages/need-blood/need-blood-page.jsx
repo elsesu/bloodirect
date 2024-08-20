@@ -8,15 +8,6 @@ import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
 import FormRequest from "../../sections/form/FormRequest";
-<<<<<<< HEAD
-
-
-const NeedBloodPage = () => {
-	
-/*
-const addData = async (formData) => {
-	//not found
-=======
 import {  db } from "../../../firebase.config";
 import { addDoc, collection } from "firebase/firestore";
 
@@ -33,7 +24,6 @@ const NeedBloodPage = () => {
 
 /*
 const addData = async (formData) => {
->>>>>>> master
     try {
       const docRef = await addDoc(collection(db, "users"), formData);
       console.log("Document written with ID: ", docRef.id);
@@ -44,8 +34,6 @@ const addData = async (formData) => {
   */
 
 
-<<<<<<< HEAD
-=======
 const handleRequest = async () => {
 	try {
 	  const docRef = await addDoc(collection(db, "request"), {
@@ -71,7 +59,6 @@ const handleRequest = async () => {
 	  console.log(error, 'there was an error');
 	}
   };
->>>>>>> master
 
 
 	const NeedBloodPageDetails = {
@@ -138,9 +125,6 @@ const handleRequest = async () => {
 		},
 	];
 
-<<<<<<< HEAD
-
-=======
 	const fields = [
 		{
 			key: "name",
@@ -192,7 +176,6 @@ const handleRequest = async () => {
 			required: true,
 		},
 	];
->>>>>>> master
 
 	return (
 		<>
@@ -200,19 +183,12 @@ const handleRequest = async () => {
 
 			<HeroComponent {...NeedBloodPageDetails.hero} />
 			<FormRequest
-<<<<<<< HEAD
-				
-				heading={"Request for emergency blood"}
-				buttonText={"Request blood"}
-			
-=======
 				fields={fields}
 				heading={"Request for emergency blood"}
 				buttonText={"Request blood"}
 				handleRequest={handleRequest}
 				formData={formData}
 				setFormData={setFormData}
->>>>>>> master
 			/>
 			<QuoteComponent {...NeedBloodPageDetails.quote} />
 			<SearchBloodStockComponent {...NeedBloodPageDetails.bloodStock} />
