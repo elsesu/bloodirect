@@ -8,10 +8,56 @@ import FormComponent from "../../sections/form/form-component";
 import HeaderComponent from "../../sections/header/header-component";
 import BeforeFooterCTA from "../../sections/before-footer-cta/before-footer-cta-components";
 import FooterComponent from "../../sections/footer/footer-component";
+<<<<<<< HEAD
 
 
 const DonateBloodPage = () => {
 	
+=======
+import { db } from "../../../firebase.config";
+import { addDoc, collection } from "firebase/firestore"; 
+
+const DonateBloodPage = () => {
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		phone: "",
+		blood_type: "",
+		state: "",
+		lga:"",
+		address: "",
+
+	});
+
+
+
+	const handleDonate = async () => {
+		try {
+		  const docRef = await addDoc(collection(db, "donate"), {
+			name: formData.name,
+			email: formData.email,
+			phone: formData.phone,
+			blood_type: formData.blood_type,
+			state: formData.state,
+			lga: formData.lga,
+			address: formData.address
+		  });
+		  console.log("Document written with ID: ", docRef.id);
+		  setFormData({
+			name: "",
+			email: "",
+			phone: "",
+			blood_type: "",
+			state: "",
+			address: "",
+			lga: "",
+		  });
+		} catch (error) {
+		  console.log(error, 'there was an error');
+		}
+	  };
+
+>>>>>>> master
 	const DonateBloodPageDetails = {
 		quote: {
 			classHint: "quote",
@@ -85,15 +131,79 @@ const DonateBloodPage = () => {
 		},
 	];
 
+<<<<<<< HEAD
 	
+=======
+	const fields = [
+		{
+			key: "name",
+			name: "name",
+			type: "text",
+			placeholder: "Name",
+			required: true,
+		},
+		{
+			key: "email",
+			name: "email",
+			type: "email",
+			placeholder: "Email",
+			required: true,
+		},
+		{
+			key: "phone",
+			name: "phone",
+			type: "text",
+			placeholder: "Phone",
+			required: true,
+		},
+		{
+			key: "blood_type",
+			name: "blood_type",
+			type: "text",
+			placeholder: "Blood Type",
+			required: true,
+		},
+		{
+			key: "state",
+			name: "state",
+			type: "text",
+			placeholder: "State",
+			required: true,
+		},
+		{
+			key: "address",
+			name: "address",
+			type: "text",
+			placeholder: "Address",
+			required: true,
+		},
+		{
+			key: "lga",
+			name: "lga",
+			type: "text",
+			placeholder: "LGA",
+			required: true,
+		},
+	];
+
+>>>>>>> master
 	return (
 		<>
 			<HeaderComponent />
 
 			<HeroComponent {...DonateBloodPageDetails.hero} />
 			<FormComponent
+<<<<<<< HEAD
 				heading={"Schedule an Appointment"}
 				buttonText={"Schedule an Appointment"}
+=======
+				fields={fields}
+				heading={"Schedule an Appointment"}
+				buttonText={"Schedule an Appointment"}
+				handleDonate={handleDonate}
+				formData={formData}
+				setFormData={setFormData}
+>>>>>>> master
 			/>
 			<ThreeStepProcessComponent
 				stepsText={DonateBloodPageDetails.stepsText}

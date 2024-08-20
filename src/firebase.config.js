@@ -18,9 +18,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+<<<<<<< HEAD
 const db = getFirestore(app);
 const storage = getStorage(app);
 const auth = getAuth(app);
+=======
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
+>>>>>>> master
 
 
 

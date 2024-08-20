@@ -25,7 +25,11 @@ export default function AdminNeedHelp() {
 
 	// useEffect(() => {
 	// 	axios
+<<<<<<< HEAD
 	// 		.get("http://localhost:5173/api/need-help")
+=======
+	// 		.get("http://localhost:3001/api/need-help")
+>>>>>>> master
 	// 		.then((response) => {
 	// 			setData(response.data);
 	// 			console.log(response.data);
@@ -94,7 +98,11 @@ export default function AdminNeedHelp() {
 		let status = !item.answered;
 
 		axios
+<<<<<<< HEAD
 			.put(`http://localhost:5173/api/need-help/answered`, {
+=======
+			.put(`http://localhost:3001/api/need-help/answered`, {
+>>>>>>> master
 				status,
 				id,
 			})
@@ -112,7 +120,11 @@ export default function AdminNeedHelp() {
 
 	const handleDelete = (id) => {
 		axios
+<<<<<<< HEAD
 			.delete(`http://localhost:5173/api/need-help/delete/${id}`)
+=======
+			.delete(`http://localhost:3001/api/need-help/delete/${id}`)
+>>>>>>> master
 			.then((response) => {
 				setData(data.filter((item) => item.id !== id));
 			})
@@ -123,7 +135,11 @@ export default function AdminNeedHelp() {
 
 	const handleUpdateClick = (id) => {
 		axios
+<<<<<<< HEAD
 			.put(`http://localhost:5173/api/need-help/update/${id}`, {
+=======
+			.put(`http://localhost:3001/api/need-help/update/${id}`, {
+>>>>>>> master
 				updatedData,
 			})
 			.then((response) => {

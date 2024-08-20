@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import "./form-component-styles.scss";
 import WrapperSection from "../wrapper-section/wrapper-section-component";
+<<<<<<< HEAD
 import { db } from '../../../firebase.config';
 import { addDoc, collection } from 'firebase/firestore';
 import { useAuth } from '../../hooks/useAuth';
@@ -23,11 +24,25 @@ const FormRequest = ({
 	const [current_hospital_address, setCurrentHospitalAddress] =  useState('')
 	const [lga, setLga] =  useState('')
 
+=======
+
+const FormRequest = ({
+	fields,
+	heading,
+	buttonText,
+	formData,
+	setFormData,
+	handleRequest,
+	handleDonate
+}) => {
+
+>>>>>>> master
     const [status, setStatus] = useState("Pending");
 	const inputStyles = `block w-full flex justify-start items-start rounded-rsm border-0 px-8 py-3 md:px-10 md:py-4 bg-light text-white ring-none placeholder:text-white outline-none focus:ring-1 focus:ring-center focus:bg-dark focus:ring-light sm:text-sm sm:leading-6`;
 
 
 
+<<<<<<< HEAD
 	const formData = {
 		name,
 		email,
@@ -52,6 +67,8 @@ const FormRequest = ({
 		}
 	  };
 	
+=======
+>>>>>>> master
   return (
     <WrapperSection>
 			<div
@@ -62,7 +79,11 @@ const FormRequest = ({
 				</h3>
 				{status === "Submited" ? (
 					<p className="text-center text-white text-sm sm:text-base mt-5">
+<<<<<<< HEAD
 						Your Request has been Scheduled,    Thank you for contacting Bloodirect.
+=======
+						Your Appointment has been Scheduled,    Thank you for contacting Bloodirect.
+>>>>>>> master
 			
 					</p>
 				) : (
@@ -71,6 +92,7 @@ const FormRequest = ({
 						// method="POST"
 						onSubmit={handleRequest}
 					>
+<<<<<<< HEAD
 					<input
 						 type="text"
 						 value={name}
@@ -152,12 +174,36 @@ const FormRequest = ({
 						<div className={"grid place-items-center sm:col-span-2 gap-5 mb-5 w-full"}>
 							<button
 							disabled={disable}
+=======
+						{fields.map((field, index) => (
+							<input
+								onChange={(e) =>
+									setFormData({
+										...formData,
+										[field.name]: e.target.value,
+									})
+								}
+								value={formData[field.name]}
+								key={field.key}
+								type={field.type}
+								name={field.name}
+								id={field.name}
+								className={inputStyles}
+								placeholder={field.placeholder}
+								required={field.required}
+							/>
+						))}
+						
+						<div className="grid place-items-center sm:col-span-2 gap-5 mb-5 w-full">
+							<button
+>>>>>>> master
 								type="submit"
 								name="submit"
 								onClick={(e) => {
 									handleRequest(e);
 									setStatus("Submited");
 								}}
+<<<<<<< HEAD
 								className={ disable ? "text-white bg-gray-500 rounded-rsm border border-white transition px-10 py-4 text-sm  font-bold w-fit cursor-pointer"  : ` rounded-rsm border border-white hover:border-red text-dark bg-white hover:bg-red hover:text-white transition px-10 py-4 text-sm  font-bold w-fit cursor-pointer` }
 							>
 								{buttonText}
@@ -166,6 +212,12 @@ const FormRequest = ({
 							{disable? (
 								<div className="text-red-100 bg-white rounded-rlg p-2"> Some Fields  Are Missing</div>
 							):<></>}
+=======
+								className={` rounded-rsm border border-white hover:border-red text-dark bg-white hover:bg-red hover:text-white transition px-10 py-4 text-sm w-fit font-bold w-fit cursor-pointer`}
+							>
+								{buttonText}
+							</button>
+>>>>>>> master
 							{/* <button
 								className={` rounded-rsm border border-white hover:border-red text-dark bg-white hover:bg-red hover:text-white transition px-10 py-4 text-sm w-fit font-bold w-fit cursor-pointer`}
 								// onClick={() => {
